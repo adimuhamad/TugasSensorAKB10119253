@@ -81,43 +81,44 @@ public class LocationActivity extends FragmentActivity {
 
             Task<Location> task = client.getLastLocation();
             task.addOnSuccessListener(new OnSuccessListener<Location>() {
-                @Override
-                public void onSuccess(Location location) {
-                    if(location != null){
-                        mapFragment.getMapAsync(new OnMapReadyCallback() {
-                            @Override
-                            public void onMapReady(@NonNull GoogleMap googleMap) {
-                                LatLng lokasi = new LatLng(location.getLatitude(),location.getLongitude());
-                                LatLng rumah = new LatLng(-6.821522948916411, 107.3910009967293);
-                                LatLng warungemak = new LatLng(-6.822582909906176, 107.38894642473112);
-                                LatLng warungayu = new LatLng(-6.819394090185485, 107.39561332609071);
-                                LatLng warungani = new LatLng(-6.822569106304825, 107.38932780646623);
-                                LatLng rmmandiri = new LatLng(-6.821661426547381, 107.39910126758153);
-                                LatLng rmmuara = new LatLng(-6.820781457027698, 107.39461209083017);
 
-                                MarkerOptions mlokasi = new MarkerOptions().position(lokasi).title("Lokasi Saat Ini");
-                                MarkerOptions mrumah = new MarkerOptions().position(rumah).title("Rumah Adi (10119253)");
-                                MarkerOptions mwarungemak = new MarkerOptions().position(warungemak).title("Warung Emak");
-                                MarkerOptions mwarungayu = new MarkerOptions().position(warungayu).title("Warung Ayu");
-                                MarkerOptions mwarungani = new MarkerOptions().position(warungani).title("Waroeng Kopi & Kuliner Teh Ani");
-                                MarkerOptions mrmmandiri = new MarkerOptions().position(rmmandiri).title("Rumah Makan Mandiri");
-                                MarkerOptions mrmmuara = new MarkerOptions().position(rmmuara).title("Rumah Makan Muara Duo");
+            @Override
+            public void onSuccess(Location location) {
+                if(location != null){
+                    mapFragment.getMapAsync(new OnMapReadyCallback() {
+                        @Override
+                        public void onMapReady(@NonNull GoogleMap googleMap) {
+                            LatLng lokasi = new LatLng(location.getLatitude(),location.getLongitude());
+                            LatLng rumah = new LatLng(-6.821522948916411, 107.3910009967293);
+                            LatLng warungemak = new LatLng(-6.822582909906176, 107.38894642473112);
+                            LatLng warungayu = new LatLng(-6.819394090185485, 107.39561332609071);
+                            LatLng warungani = new LatLng(-6.822569106304825, 107.38932780646623);
+                            LatLng rmmandiri = new LatLng(-6.821661426547381, 107.39910126758153);
+                            LatLng rmmuara = new LatLng(-6.820781457027698, 107.39461209083017);
 
-                                googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(lokasi,17));
-                                googleMap.addMarker(mlokasi);
-                                googleMap.addMarker(mrumah);
-                                googleMap.addMarker(mwarungemak);
-                                googleMap.addMarker(mwarungayu);
-                                googleMap.addMarker(mwarungani);
-                                googleMap.addMarker(mrmmandiri);
-                                googleMap.addMarker(mrmmuara);
-                            }
-                        });
-                    }
+                            MarkerOptions mlokasi = new MarkerOptions().position(lokasi).title("Lokasi Saat Ini");
+                            MarkerOptions mrumah = new MarkerOptions().position(rumah).title("Rumah Adi (10119253)");
+                            MarkerOptions mwarungemak = new MarkerOptions().position(warungemak).title("Warung Emak");
+                            MarkerOptions mwarungayu = new MarkerOptions().position(warungayu).title("Warung Ayu");
+                            MarkerOptions mwarungani = new MarkerOptions().position(warungani).title("Waroeng Kopi & Kuliner Teh Ani");
+                            MarkerOptions mrmmandiri = new MarkerOptions().position(rmmandiri).title("Rumah Makan Mandiri");
+                            MarkerOptions mrmmuara = new MarkerOptions().position(rmmuara).title("Rumah Makan Muara Duo");
+
+                            googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(lokasi,17));
+                            googleMap.addMarker(mlokasi);
+                            googleMap.addMarker(mrumah);
+                            googleMap.addMarker(mwarungemak);
+                            googleMap.addMarker(mwarungayu);
+                            googleMap.addMarker(mwarungani);
+                            googleMap.addMarker(mrmmandiri);
+                            googleMap.addMarker(mrmmuara);
+                        }
+                    });
                 }
-            });
-        }
+            }
+        });
+    }
 
     public void onBackPressed() {
         new AlertDialog.Builder(this)
