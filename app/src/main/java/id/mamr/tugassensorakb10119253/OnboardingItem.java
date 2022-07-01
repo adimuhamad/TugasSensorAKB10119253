@@ -1,5 +1,9 @@
 package id.mamr.tugassensorakb10119253;
 
+// NIM : 10119253
+// NAMA : Mochamad Adi Maulia Rahman
+// KELAS : IF-7
+
 public class OnboardingItem {
 
     private int imageOnboarding;
