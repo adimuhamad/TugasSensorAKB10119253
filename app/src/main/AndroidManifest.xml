@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TugasSensorAKB10119253">
         <activity
+            android:name=".OnboardingItem"
+            android:exported="false" />
+        <activity
             android:name=".OnboardingActivity"
             android:exported="false" />
         <activity
