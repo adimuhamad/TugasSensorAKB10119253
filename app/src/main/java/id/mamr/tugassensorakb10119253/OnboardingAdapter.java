@@ -14,9 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import id.mamr.tugassensorakb10119253.OnboardingItem;
-import id.mamr.tugassensorakb10119253.R;
-
 public class OnboardingAdapter extends RecyclerView.Adapter<OnboardingAdapter.OnboardingViewHolder> {
 
     private final List<OnboardingItem> onboardingItems;

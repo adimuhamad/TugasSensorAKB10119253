@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.view.Window;
+
+import java.util.Objects;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
@@ -17,11 +19,23 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow();
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_splash);
 
-        new Handler().postDelayed(() -> {
-            startActivity(new Intent(SplashActivity.this, OnboardingActivity.class));
-            finish();
-        }, 3000);
+        Thread thread = new Thread() {
+            public void run(){
+                try{
+                    sleep(3000);
+                } catch (InterruptedException e){
+                    e.printStackTrace();
+                } finally {
+                    startActivity(new Intent(SplashActivity.this, OnboardingActivity.class));
+                    finish();
+                }
+            }
+        };
+        thread.start();
     }
 }

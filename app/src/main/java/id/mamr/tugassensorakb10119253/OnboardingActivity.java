@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -23,11 +24,7 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import id.mamr.tugassensorakb10119253.BuildConfig;
-import id.mamr.tugassensorakb10119253.R;
-import id.mamr.tugassensorakb10119253.OnboardingAdapter;
-import id.mamr.tugassensorakb10119253.OnboardingItem;
+import java.util.Objects;
 
 public class OnboardingActivity extends AppCompatActivity {
 
@@ -38,8 +35,11 @@ public class OnboardingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        getWindow();
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_onboarding);
+
         checkFirstRun();
 
         layoutOnboardingIndicators = findViewById(R.id.layoutOnboardingIndicators);
@@ -96,7 +96,7 @@ public class OnboardingActivity extends AppCompatActivity {
 
         OnboardingItem itemInformasi1 = new OnboardingItem();
         itemInformasi1.setJudulOnboarding("Selamat Datang");
-        itemInformasi1.setDeskripsiOnboarding("Apakah Anda Ingin Menjalajahi Dunia?");
+        itemInformasi1.setDeskripsiOnboarding("Apakah Anda Siap Menjelajahi Dunia?");
         itemInformasi1.setImageOnboarding(R.drawable.welcome);
 
         OnboardingItem itemInformasi2 = new OnboardingItem();

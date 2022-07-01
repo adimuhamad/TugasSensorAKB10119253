@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreen">
+    android:layout_marginBottom="100dp"
+    tools:context=".SplashActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -14,7 +15,8 @@
         android:layout_centerVertical="true"
         app:srcCompat="@drawable/location_logo"
         tools:layout_editor_absoluteX="87dp"
-        tools:layout_editor_absoluteY="247dp" />
+        tools:layout_editor_absoluteY="247dp"
+        android:contentDescription="@string/logo" />
 
     <TextView
         android:layout_width="match_parent"
