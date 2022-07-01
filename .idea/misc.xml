@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/MochamadAdiMR/AndroidStudioProjects/TugasSensorAKB10119253/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/MochamadAdiMR/AndroidStudioProjects/TugasSensorAKB10119253/app/src/main/res/drawable/onboarding_indicator_active.xml" value="0.1" />
         <entry key="..\:/Users/MochamadAdiMR/AndroidStudioProjects/TugasSensorAKB10119253/app/src/main/res/drawable/onboarding_indicator_inactive.xml" value="0.113" />
-        <entry key="..\:/Users/MochamadAdiMR/AndroidStudioProjects/TugasSensorAKB10119253/app/src/main/res/layout/activity_about.xml" value="0.25" />
+        <entry key="..\:/Users/MochamadAdiMR/AndroidStudioProjects/TugasSensorAKB10119253/app/src/main/res/layout/activity_about.xml" value="0.22" />
         <entry key="..\:/Users/MochamadAdiMR/AndroidStudioProjects/TugasSensorAKB10119253/app/src/main/res/layout/activity_location.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/MochamadAdiMR/AndroidStudioProjects/TugasSensorAKB10119253/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/MochamadAdiMR/AndroidStudioProjects/TugasSensorAKB10119253/app/src/main/res/layout/activity_onboarding.xml" value="0.20416666666666666" />
