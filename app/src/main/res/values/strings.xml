@@ -13,10 +13,12 @@
 
     <string name="deskripsi">Memanfaatkan Sensor GPS Untuk Menampilkan Lokasi Anda dan Menampilkan 5 Lokasi Tempat Makan Terfavorit</string>
     <string name="kosong" />
-    <string name="version">Beta 0.2.7.22.0015</string>
+    <string name="version">Beta 0.2.7-20220034</string>
     <string name="versiontext">App Version</string>
     <string name="namatitle">NAMA</string>
     <string name="nimtitle">NIM</string>
     <string name="kelastitle">KELAS</string>
     <string name="emailtitle">EMAIL</string>
+    <string name="aplikasi_google_maps">Aplikasi Google Maps</string>
+    <string name="logo">Logo</string>
 </resources>
